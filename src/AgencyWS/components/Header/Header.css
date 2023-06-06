@@ -1,0 +1,139 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+}
+
+header.scrolled {
+  box-shadow: 0 2px 30px hsla(0, 0%, 0%, 0.1);
+  background-color: var(--white);
+}
+
+header.scrolled .logo,
+header.scrolled .navlist li a {
+  color: var(--sp-blue);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: var(--fs-3);
+  color: var(--white);
+  font-family: var(--ff-source-sans-pro);
+  font-weight: 700;
+}
+
+header .navlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .navlist li {
+  width: max-content;
+}
+
+header .navlist li a {
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+header .headerBtn {
+  font-size: var(--fs-7);
+}
+
+header .headerBtn i {
+  margin-right: 1rem;
+}
+
+header .crossbar {
+  display: none;
+  font-size: var(--fs-3);
+  font-weight: 600;
+  color: var(--white);
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.drawer-header .drawer-logo {
+  font-size: var(--fs-1);
+  color: var(--sp-blue);
+  font-weight: 700;
+}
+
+.drawer-header .cross {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--sp-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drawer-header .cross i {
+  font-size: var(--fs-3);
+}
+
+.drawer-nav {
+  padding: 2.5rem;
+  margin-top: 3rem;
+}
+
+.drawer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.drawer-nav ul li {
+  width: 100%;
+}
+
+.drawer-nav ul li a {
+  font-size: var(--fs-5);
+  font-weight: 600;
+  color: var(--space-cadet-1);
+  text-transform: capitalize;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--platinum);
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  header .navlist {
+    display: none;
+  }
+
+  header .crossbar {
+    display: block;
+  }
+  header.scrolled .crossbar {
+    color: var(--sp-blue);
+  }
+  header .headerBtn {
+    margin-left: auto;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .headerBtn {
+    display: none;
+  }
+}

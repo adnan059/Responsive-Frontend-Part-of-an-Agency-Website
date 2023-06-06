@@ -1,0 +1,85 @@
+.specialization .sectionTitle {
+  display: block;
+  text-align: center;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.specialization .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.spBox {
+  box-shadow: var(--shadow);
+  padding: 5rem 1.2rem 2rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.spBox h2 {
+  font-size: var(--fs-4);
+  color: var(--sp-blue);
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.spBox .spIcon2 {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1.5px solid var(--winter-sky);
+  color: var(--winter-sky);
+  cursor: pointer;
+}
+
+.spBox .spIcon2 i {
+  font-size: var(--fs-8);
+}
+
+.spBox .spIcon1 {
+  position: relative;
+
+  width: max-content;
+  margin: 0 auto;
+}
+
+.spBox .spIcon1 i {
+  font-size: var(--fs-2);
+  color: var(--white);
+}
+
+.spBox .spIcon1::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-image: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"> <path fill="%23EF1570" d="M25,-27.9C36.7,-19.9,53.6,-16.2,60.1,-6.6C66.6,3,62.7,18.5,53.2,26.8C43.8,35.2,28.7,36.4,14.4,43.1C0,49.9,-13.6,62.3,-25.6,61.7C-37.5,61,-47.9,47.3,-57.9,32.3C-67.9,17.3,-77.5,1,-74.5,-12.6C-71.4,-26.2,-55.8,-37,-41.3,-44.4C-26.7,-51.9,-13.4,-56,-3.4,-52C6.6,-47.9,13.3,-35.8,25,-27.9Z" transform="translate(100 100)" /></svg>');
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .specialization .container {
+    flex-wrap: wrap;
+  }
+  .spBox {
+    max-width: 300px;
+  }
+}

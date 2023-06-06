@@ -1,0 +1,87 @@
+footer {
+  background: url("./images/footer-bg.png"), var(--gradient-1);
+  background-position: center;
+  background-size: cover;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 6rem 2rem;
+}
+
+.footerBox {
+  color: var(--white);
+}
+
+.footerBox h2 {
+  margin-bottom: 1.3rem;
+  font-size: var(--fs-4);
+  font-weight: 600;
+}
+
+.footerBox a:hover {
+  text-decoration: underline;
+}
+
+.footerBox1 .socialIcons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footerBox1 .socialIcons span {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footerBox1 .socialIcons span i {
+  color: var(--winter-sky);
+}
+
+.footerBox5 span i {
+  color: var(--winter-sky);
+  margin-right: 1.2rem;
+}
+
+.credit {
+  text-align: center;
+  font-size: var(--fs-6);
+  padding-bottom: 1.5rem;
+  color: var(--white);
+}
+.credit a {
+  margin-left: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  footer .container {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  footer .container {
+    grid-template-columns: repeat(1, minmax(275px, 1fr));
+  }
+}
